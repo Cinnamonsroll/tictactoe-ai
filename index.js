@@ -3,9 +3,7 @@ const { Client } = require("discord.js"),
     intents: 32767,
   }),
   tictactoeGames = {};
-client.on("ready", () => {
-  console.log("ready");
-});
+client.on("ready", () => console.log("ready"));
 client.on("messageCreate", async (message) => {
   if (!message.guild || message.author.bot) return;
   if (message.content === "!ttt") {
